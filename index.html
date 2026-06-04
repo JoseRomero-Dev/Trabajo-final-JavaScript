@@ -12,29 +12,53 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Mi empresa</h1>
-        </div>
         <nav>
+            <div class="logo">
+                <h1>Mi empresa</h1>
+            </div>
             <!--Menú de navegación-->
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links"> <!--implementar cargar dinamicamente-->
                 <a class="active" href="index.html">Inicio</a>
                 <a href="./views/galeria.html">Galería</a>
                 <a href="./views/presupuesto.html">Presupuesto</a>
                 <a href="./views/contacto.html">Contacto</a>
             </div>
+            <button class="btn-cambiar-tema" id="btn-cambiar-tema">Cambiar tema</button>
         </nav>
     </header>
     <main>
-        <section>
-            <h2>PRESENTACIÓN</h2>
+        <!--PRESENTACION-->
+        <section class="section" id="presentacion">
+            <h2 class="titulo">PRESENTACIÓN</h2>
+            <div class="presentacion-container">
+                <p>Creamos soluciones web modernas para empresas profesionales.</p>
+            </div>
         </section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <!--SERVICIOS-->
+        <section class="section" id="servicios">
+            <h2 class="titulo">SERVICIOS</h2>
+            <div class="servicios-container">
+                <ul>
+                    <li>Desarrollo Web</li>
+                    <li>Diseño responsive</li>
+                    <li>Aplicaciones JavaScript</li>
+                    <li>Mantenimiento Web</li>
+                </ul>
+            </div>
+        </section>
+        <!--PROYECTOS-->
+        <section class="section" id="proyectos">
+            <h2 class="titulo">PROYECTOS DESTACADOS</h2>
+            <div class="proyectos-container"></div>
+        </section>
+        <!--NOTICIAS-->
+        <section class="section" id="noticias">
+            <h2 class="titulo">NOTICIAS</h2>
+        </section>
     </main>
     <footer>
         <h2>FOOTER</h2>
+        <p>Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
