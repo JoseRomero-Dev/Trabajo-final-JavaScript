@@ -65,7 +65,7 @@ nav a:hover{
     gap: 20px;
     min-height: 600px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -80,7 +80,15 @@ nav a:hover{
 /*PRESENTACION*/
 .presentacion-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#presentacion{
+    background-image: url('../assets/background/background_1.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
