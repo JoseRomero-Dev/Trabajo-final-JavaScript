@@ -1,10 +1,11 @@
 /*Variables*/
 :root{
-    --background-color-primary: #3b93ad;
-    --background-color-secondary: rgb(41, 41, 194);
-    --text-color: #fff;
+    --background-color-primary: #000000;
+    --background-color-secondary: #fff;
+    --text-color-primary: #fff;
+    --text-color-secundary: #000000;
     --a-link: #fff;
-    --a-link-hover: #1e1e2e;
+    --a-link-hover: #bfbfcc;
 }
 
 /*Reseteo*/
@@ -22,24 +23,46 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color-primary);
-    color: var(--text-color);
+    color: var(--text-color-primary);
 }
 /*NAVBAR*/
 header{
     position: sticky;
     top: 0;
-    backdrop-filter: blur(10px);
     z-index: 100;
+
+    background-color: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0);
+}
+header.scrolled{
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
 }
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;    
-    padding: 30px;
+    padding: 20px;
     gap: 20px;
 }
-nav a{
+/*NAVBAR-------Logo*/
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+.logo h1{
+    font-size: 1.8rem;
+}
+/*NAVBAR------Links*/
+.nav-links a, .btn-presupuesto{
     text-decoration: none;
     color: inherit;
     border: 1px solid var(--a-link);
@@ -47,48 +70,136 @@ nav a{
     padding: 5px 10px;
     transition: 0.2s all ease-in-out;
 }
-nav a:hover{
-    background-color: rgba(0, 0, 0, 0.3);
+.nav-links a:hover{
+    background-color: var(--a-link-hover);
+}
+.btn-presupuesto:hover{
+    background-color: var(--a-link-hover);
+
 }
 .active{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--a-link-hover);
 }
 .nav-links{
     display: flex;
     gap: 10px;
 }
 
-/*SECCIONES*/
+/*SECCIONES -- general*/
+.titulo{
+    color: var(--text-color-secundary);
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 35px;
+    /* border-bottom: 2px solid black; */
+}
+.titulo span{
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 2px solid black;
+}
 .section{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    min-height: 600px;
     width: 100%;
-    max-width: 100%;
     padding: 0 20px;
     margin: 0 auto;
 }
 
-.titulo{
-    color: var(--text-color);
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
 
 /*PRESENTACION*/
-.presentacion-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    justify-content: space-evenly;
-    align-items: center;
-}
 #presentacion{
-    background-image: url('../assets/background/background_1.svg');
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/background/programando.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+.titulo-hero{
+    font-size: clamp(3rem, 4vw, 4.5rem);
+    line-height: 1.1;
+}
+.presentacion-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 25px;
+    max-width: 650px;
+    margin-left: 80px;
+}
+
+.presentacion-container p{
+    font-size: 1.2rem;
+    max-width: 500px;
+}
+
+.btn-presentacion{
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--a-link);
+    padding: 8px 15px;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: .3s;
+}
+.btn-presentacion:hover{
+    background-color: white;
+    color:black;
+}
+/*SERVICIOS*/
+
+#servicios{
+    padding-top: 40px;
+    background-color: #fff;
+    color: #000000;
+}
+.servicios-container{
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+/*SERVICIOS---Tarjetas*/
+.card-servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    gap: 20px;
+    padding: 2rem;
+    
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .8);
+    
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.card-servicio:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+}
+.card-servicio img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+.card-servicio h3{
+    font-size: 1.4rem;
+}
+.card-servicio p{
+    line-height: 1.6;
+    color: #555;
+}
+/*PROYECTOS*/
+#proyectos{
+    padding-top: 40px;
+}
+

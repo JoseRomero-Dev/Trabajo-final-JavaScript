@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Mi Web</title>
     <!--Enlace a JavaScript-->
+    <script src="./js/components/navbar.js" defer></script>
     <script src="js/script.js" defer></script>
     <!--Enlace a componentes dinámicos Implementar más adelante-->
     <!--Link a pagina de estilos CSS-->
@@ -13,9 +14,10 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <h1>Mi empresa</h1>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="./assets/iconos/code-svgrepo-com.svg" alt="Logo empresa">
+                <h1>DevSolutions</h1>
+            </a>
             <!--Menú de navegación-->
             <div class="nav-links" id="nav-links"> <!--implementar cargar dinamicamente-->
                 <a class="active" href="index.html">Inicio</a>
@@ -23,38 +25,53 @@
                 <a href="./views/presupuesto.html">Presupuesto</a>
                 <a href="./views/contacto.html">Contacto</a>
             </div>
-            <button class="btn-cambiar-tema" id="btn-cambiar-tema">Cambiar tema</button>
+            <a href="./views/presupuesto.html" class="btn-presupuesto" id="btn-presupuesto">Solicitar presupuesto</a>
         </nav>
     </header>
     <main>
         <!--PRESENTACION-->
         <section class="section" id="presentacion">
-            <h2 class="titulo">PRESENTACIÓN</h2>
             <div class="presentacion-container">
-                <p>Creamos soluciones web modernas para empresas profesionales.</p>
-                <p>Creamos soluciones web modernas para empresas profesionales.</p>
+                <h2 class="titulo-hero">Desarrollamos soluciones web que impulsan tu negocio</h2>
+                <p>Creamos sitios web modernos, rápidos y seguros adaptados a tus necesidades.</p>
+                <a href="./views/contacto.html" class="btn-presentacion">Contactar</a>
             </div>
         </section>
         <!--SERVICIOS-->
         <section class="section" id="servicios">
-            <h2 class="titulo">SERVICIOS</h2>
+            <h2 class="titulo"><span>Nuestros servicios</span></h2>
             <div class="servicios-container">
-                <ul>
-                    <li>Desarrollo Web</li>
-                    <li>Diseño responsive</li>
-                    <li>Aplicaciones JavaScript</li>
-                    <li>Mantenimiento Web</li>
-                </ul>
+                <!--TARJETAS-->
+                <article class="card-servicio">
+                    <img src="./assets/iconos/code.svg" alt="Desarrollo web">
+                    <h3>Desarrollo Web</h3>
+                    <p>Creamos páginas Web modernas y funcionales a medida.</p>
+                </article>
+                <article class="card-servicio">
+                    <img src="./assets/iconos/mobile.svg" alt="Diseño Responsive">
+                    <h3>Diseño Responsive</h3>
+                    <p>Diseños adaptados a todos los dispositivos para una mejor experiencia.</p>
+                </article>
+                <article class="card-servicio">
+                    <img src="./assets/iconos/desktop.svg" alt="Aplicaciones JavaScript">
+                    <h3>Aplicaciones JS</h3>
+                    <p>Desarrollamos aplicaciones interactivas con las ultimas tecnologías.</p>
+                </article>
+                <article class="card-servicio">
+                    <img src="./assets/iconos/gear.svg" alt="Mantenimiento">
+                    <h3>Mantenimiento</h3>
+                    <p>Actualizamos y optimizamos tu web para que siempre funcione al 100%</p>
+                </article>
             </div>
         </section>
         <!--PROYECTOS-->
         <section class="section" id="proyectos">
-            <h2 class="titulo">PROYECTOS DESTACADOS</h2>
+            <h2 class="titulo"><span>Proyectos destacados</span></h2>
             <div class="proyectos-container"></div>
         </section>
         <!--NOTICIAS-->
         <section class="section" id="noticias">
-            <h2 class="titulo">NOTICIAS</h2>
+            <h2 class="titulo"><span>Últimas noticias</span></h2>
         </section>
     </main>
     <footer>
