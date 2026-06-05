@@ -5,7 +5,7 @@
     --text-color-primary: #fff;
     --text-color-secundary: #000000;
     --a-link: #fff;
-    --a-link-hover: #bfbfcc;
+    --a-link-hover: #1960d2;
 }
 
 /*Reseteo*/
@@ -23,23 +23,24 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-color-primary);
+    
 }
 /*NAVBAR*/
 header{
     position: sticky;
     top: 0;
     z-index: 100;
-
+    color: #fff;
     background-color: #000000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(0);
 }
 header.scrolled{
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
 }
 nav{
+    color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;    
@@ -62,7 +63,12 @@ nav{
     font-size: 1.8rem;
 }
 /*NAVBAR------Links*/
-.nav-links a, .btn-presupuesto{
+.nav-links a{
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s all ease-in-out;
+}
+.btn-presupuesto{
     text-decoration: none;
     color: inherit;
     border: 1px solid var(--a-link);
@@ -71,18 +77,18 @@ nav{
     transition: 0.2s all ease-in-out;
 }
 .nav-links a:hover{
-    background-color: var(--a-link-hover);
+    color: var(--a-link-hover);
 }
 .btn-presupuesto:hover{
     background-color: var(--a-link-hover);
 
 }
-.active{
-    background-color: var(--a-link-hover);
+.nav-links .active{
+    color: var(--a-link-hover);
 }
 .nav-links{
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 /*SECCIONES -- general*/
@@ -107,6 +113,7 @@ nav{
 
 /*PRESENTACION*/
 #presentacion{
+    color: var(--text-color-primary);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -148,6 +155,7 @@ nav{
     background-color: white;
     color:black;
 }
+
 /*SERVICIOS*/
 
 #servicios{
@@ -201,5 +209,68 @@ nav{
 /*PROYECTOS*/
 #proyectos{
     padding-top: 40px;
+    background-color: #fff;
+    color: #000000;
 }
+.proyectos-container{
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+/*PROYECTOS----Tarjetas*/
+.card-proyecto{
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .8);
+
+    transition: all 0.3s ease-in-out;
+}
+.card-proyecto:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .5);
+}
+.card-proyecto img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.card-proyecto h3{
+    margin: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.card-proyecto p{
+    margin: 0 10px 15px 15px;
+    line-height: 1.6;
+    color: #555;
+}
+.enlace-proyecto{
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    text-decoration: none;
+    color: #1960d2;
+    font-weight:600;
+    width: fit-content;
+    margin: 0 10px 15px 15px;
+}
+.enlace-proyecto img{
+    width: 18px;
+    height: 18px;
+    display: block;
+    transform: translateY(2px);
+}
+/*NOTICIAS*/
+#noticias{
+    padding-top: 40px;
+    background-color: #fff;
+}
+
+
 
