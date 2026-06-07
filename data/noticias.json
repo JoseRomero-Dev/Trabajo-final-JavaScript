@@ -4,25 +4,19 @@
             "titulo": "Nueva web corporativa",
             "descripcion": "Hemos lanzado una nueva web para una empresa tecnológica.",
             "fecha": "2025-06-01",
-            "imagen": "url"
+            "imagen": "../assets/images/noticias/noticia_1.jpg"
         },
         {
             "titulo": "Aplicación JavaScript",
             "descripcion": "Finalizado el desarrollo de una aplicación de gestión.",
             "fecha": "2025-06-01",
-            "imagen": "url"
+            "imagen": "../assets/images/noticias/noticia_2.jpg"
         },
         {
             "titulo": "Diseño responsive",
             "descripcion": "Nuevo proyecto optimizado para dispositivos móviles.",
             "fecha": "2025-06-01",
-            "imagen": "url"
-        },
-        {
-            "titulo": "Diseño responsive",
-            "descripcion": "Nuevo proyecto optimizado para dispositivos móviles.",
-            "fecha": "2025-06-01",
-            "imagen": "url"
+            "imagen": "../assets/images/noticias/noticia_1.jpg"
         }
     ]
 }
