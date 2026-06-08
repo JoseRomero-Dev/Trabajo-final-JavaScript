@@ -23,7 +23,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 //Animación cards de las secciones
-const elements = document.querySelectorAll('.titulo, .card-servicio, .card-proyecto, .card-noticia');
+let elements = document.querySelectorAll('.titulo, .card-servicio, .card-proyecto, .card-noticia');
 
 function mostrarElements() {
     const altura = window.innerHeight * 0.8;
@@ -38,6 +38,10 @@ function mostrarElements() {
 }
 
 window.addEventListener('scroll', () => {
-    scrollNavBar(),
+    scrollNavBar();
     mostrarElements();
 });
+document.addEventListener('noticiasListas', () => {
+    elements = document.querySelectorAll('.titulo, .card-servicio, .card-proyecto, .card-noticia');
+    mostrarElements();
+})
