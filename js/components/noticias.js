@@ -18,5 +18,8 @@ fetch('./data/noticias.json')
         });
 
         noticiasContainer.innerHTML = contenido;
+
+        //Avisar al main script que las noticias estan en el DOM
+        document.dispatchEvent(new Event('noticiasListas'));
     })
     .catch(error => console.error(error));

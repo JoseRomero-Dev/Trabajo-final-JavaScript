@@ -112,7 +112,16 @@ nav{
     text-align: center;
     font-size: 35px;
     margin-bottom: 35px;
-    /* border-bottom: 2px solid black; */
+    
+    /*animacion*/
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+.titulo.show{
+    /*animacion*/
+    opacity: 1;
+    transform: translateY(0);
 }
 .titulo span{
     display: inline-block;
@@ -167,6 +176,7 @@ nav{
     transition: .3s;
 }
 .btn-presentacion:hover{
+    /*efecto*/
     background-color: white;
     color:black;
 }
@@ -200,12 +210,20 @@ nav{
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, .8);
-    
-    transition: all .3s ease-in-out;
     cursor: pointer;
+    /*animacion*/
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all .4s ease-in-out;
+}
+.card-servicio.show{
+    /*animacion*/
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .card-servicio:hover{
+    /*efecto*/
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
 }
@@ -243,10 +261,18 @@ nav{
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, .8);
-
-    transition: all 0.3s ease-in-out;
+    /*animacion*/
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.4s ease-in-out;
+}
+.card-proyecto.show{
+    /*animacion*/
+    opacity: 1;
+    transform: translateY(0);
 }
 .card-proyecto:hover{
+    /*efecto*/
     transform: translateY(-8px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, .5);
 }
@@ -302,10 +328,19 @@ nav{
     gap: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
-    transition: all .3s ease-in-out;
+    /*animacion*/
+    transition: all .4s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+.card-noticia.show{
+    /*animacion*/
+    opacity: 1;
+    transform: translateY(0);
 }
 .card-noticia:hover{
     transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .5);
 }
 .card-noticia img{
     width: 35%;
@@ -481,8 +516,8 @@ footer{
     }
     /*HERO / PRESENTACIÓN*/
     #presentacion{
-        align-items: flex-end;
-        padding-bottom: 60px;
+        align-items: center;
+        padding-bottom: 0;
     }
     .presentacion-container{
         margin-left: 0;
