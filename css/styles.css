@@ -440,8 +440,11 @@ footer{
     border-bottom: 2px solid black;
 }
 #presupuesto{
-    background-color: #fff;
     padding: 40px 20px 80px;
+    background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('../assets/background/programando.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 #formulario-presupuesto{
     max-width: 800px;
@@ -451,6 +454,7 @@ footer{
     gap: 25px;
 }
 fieldset{
+    background-color: #fff;
     border: none;
     padding: 25px;
     border-radius: 12px;
@@ -461,7 +465,7 @@ legend{
     font-weight: 700;
     padding: 0 10px;
 
-    color: #1960d2;
+    color: #000;
 }
 /*FORMULARIO-Campos e inputs/selects*/
 .campo{
