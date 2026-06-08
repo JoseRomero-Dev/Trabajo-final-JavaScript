@@ -427,6 +427,121 @@ footer{
     border-top: 1px solid rgba(255, 255, 255, .1);
 }
 
+/*PRESUPUESTO-FORMULARIO*/
+.titulo-form{
+    color: var(--text-color-secundary);
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 35px;
+}
+.titulo-form span{
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 2px solid black;
+}
+#presupuesto{
+    background-color: #fff;
+    padding: 40px 20px 80px;
+}
+#formulario-presupuesto{
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+fieldset{
+    border: none;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+}
+legend{
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0 10px;
+
+    color: #1960d2;
+}
+/*FORMULARIO-Campos e inputs/selects*/
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.campo label{
+    font-weight: 600;
+}
+.campo input, .campo select{
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: .3s ease;
+}
+.campo input:focus, .campo select:focus{
+    outline: none;
+    border-color: #1960d2;
+    box-shadow: 0 0 0 3px rgba(25, 96, 210, .15);
+}
+.extras-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.extras-container label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+/*Resumen presupuesto*/
+#presupuesto-final{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1960d2;
+}
+/*Condiciones*/
+.condiciones{
+    text-align: center;
+}
+.condiciones label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+/*Botones formulario*/
+.botones-formulario{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.botones-formulario button{
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.botones-formulario button[type="submit"]{
+    background-color: #1960d2;
+    color: white;
+}
+.botones-formulario button[type="submit"]:hover{
+    background-color: #0f4fb8;
+}
+.botones-formulario button[type="reset"]{
+    background-color: #e5e7eb;
+}
+.botones-formulario button[type="reset"]:hover{
+    background-color: #d1d5db;
+}
+
 /*MEDIA QUERIES*/
 /*TABLET (max-width: 1024px)*/
 @media (max-width: 1024px){
@@ -615,6 +730,16 @@ footer{
     }
     .footer-bottom p{
         padding: 15px 20px 0;
+    }
+    /*FORMULARIO*/
+    fieldset{
+        padding: 20px;
+    }
+    .botones-formulario{
+        flex-direction: column;
+    }
+    .botones-formulario button{
+        width: 100%;
     }
 }
 /*MÓVIL PEQUEÑO  (max-width: 480px)*/
