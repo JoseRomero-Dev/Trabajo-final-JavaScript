@@ -1,5 +1,6 @@
 const header = document.querySelector('header');
 
+//Para controlar el efecto del navbar
 function scrollNavBar() {
     if (window.scrollY > 100) {
         header.classList.add('scrolled');
@@ -26,7 +27,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 let elements = document.querySelectorAll('.titulo, .card-servicio, .card-proyecto, .card-noticia');
 
 function mostrarElements() {
-    const altura = window.innerHeight * 0.8;
+    const altura = window.innerHeight * 0.85;
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         if (elementTop < altura) {

@@ -429,7 +429,7 @@ footer{
 
 /*PRESUPUESTO-FORMULARIO*/
 .titulo-form{
-    color: var(--text-color-secundary);
+    color: var(--text-color-primary);
     text-align: center;
     font-size: 35px;
     margin-bottom: 35px;
@@ -437,35 +437,37 @@ footer{
 .titulo-form span{
     display: inline-block;
     padding-bottom: 8px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #fff;
 }
 #presupuesto{
     padding: 40px 20px 80px;
-    background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,.2)), url('../assets/background/programando.jpg');
+    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('../assets/background/programando2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 #formulario-presupuesto{
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
+
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 fieldset{
-    background-color: #fff;
     border: none;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+    padding: 0;
 }
 legend{
     font-size: 1.3rem;
     font-weight: 700;
-    padding: 0 10px;
+    margin-bottom: 20px;
 
-    color: #000;
+    color: #1960d2;
 }
 /*FORMULARIO-Campos e inputs/selects*/
 .campo{
@@ -478,6 +480,7 @@ legend{
     font-weight: 600;
 }
 .campo input, .campo select{
+    font-family: inherit;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -504,7 +507,7 @@ legend{
 #presupuesto-final{
     font-size: 1.2rem;
     font-weight: bold;
-    color: #1960d2;
+    color: #000;
 }
 /*Condiciones*/
 .condiciones{
@@ -525,10 +528,13 @@ legend{
 }
 .botones-formulario button{
     padding: 10px 22px;
+
     border: none;
     border-radius: 8px;
+
     font-size: 1rem;
     font-weight: 600;
+
     cursor: pointer;
     transition: .3s ease;
 }
@@ -736,7 +742,7 @@ legend{
         padding: 15px 20px 0;
     }
     /*FORMULARIO*/
-    fieldset{
+    #formulario-presupuesto{
         padding: 20px;
     }
     .botones-formulario{
