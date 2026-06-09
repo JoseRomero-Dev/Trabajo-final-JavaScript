@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presupuesto | Mi Web</title>
     <!--Enlace a JavaScript-->
+    <script src="../js/components/presupuesto.js" defer></script>
     <script src="../js/script.js" defer></script>
     <!--Enlace a componentes dinámicos Implementar más adelante-->
     <!--Link a pagina de estilos CSS-->
     <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -32,91 +35,152 @@
     </header>
     <main>
         <section class="section" id="presupuesto">
-            <h2 class="titulo-form"><span>Solcita tu presupuesto</span></h2>
+            <h2 class="titulo-form"><span>Solicita tu presupuesto</span></h2>
 
-            <form id="formulario-presupuesto">
+            <div id="formulario-presupuesto">
                 <!--Cabecera-->
                 <div class="form-header">
-                    <p class="form-header-eyebrow">Solictud de proyecto</p>
-                    
+                    <p class="form-header-eyebrow">Solicitud de proyecto</p>
+                    <h3>Configura tu presupuesto</h3>
                 </div>
-                <!--DATOS DE CONTACTO-->
-                <fieldset>
-                    <legend>Datos de contacto</legend>
-                    <div class="campo">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                    </div>
-                    <div class="campo">
-                        <label for="apellidos">Apellidos</label>
-                        <input type="text" id="apellidos" name="apellidos" required>
-                    </div>
-                    <div class="campo">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" required>
-                    </div>
-                    <div class="campo">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </fieldset>
-                <!--PRESUPUESTO-->
-                <fieldset>
-                    <legend>Configuración del proyecto</legend>
-                    <div class="campo">
-                        <label for="producto">Producto</label>
-                        <select name="producto" id="producto">
-                            <option value="500">Landing Page</option>
-                            <option value="900">Web corporativa</option>
-                            <option value="1500">Tienda online</option>
-                        </select>
-                    </div>
-                    <div class="campo">
-                        <label for="plazo">Plazo (meses)</label>
-                        <input type="number" name="plazo" id="plazo" min="1" max="12" value="1">
-                    </div>
-                    <div class="campo">
-                        <label>Extras</label>
-                        <div class="extras-container">
-                            <label>
-                                <input type="checkbox" name="extra" class="extra" value="200">SEO Avanzado (+200€)
-                            </label>
-                            <label>
-                                <input type="checkbox" name="extra" class="extra" value="150">Blog Corporativo (+150€)
-                            </label>
-                            <label>
-                                <input type="checkbox" name="extra" class="extra" value="300">Mantenimiento 1 año (+300€)
-                            </label>
+
+                <form id="form-presupuesto" class="form-body">
+                    <!--Datos de contacto-->
+                    <div class="form-section">
+                        <p class="section-label">Datos de contacto</p>
+                        <div class="campos-grid">
+                            <!--NOMBRE-->
+                            <div class="campo">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Juan" maxlength="15" required>
+                                <span class="error-msg" id="error-nombre"></span>
+                            </div>
+                            <!--APELLIDOS-->
+                            <div class="campo">
+                                <label for="apellidos">Apellidos</label>
+                                <input type="text" id="apellidos" name="apellidos" placeholder="Garcia López"
+                                    maxlength="40" required>
+                                <span class="error-msg" id="error-apellidos"></span>
+                            </div>
+                            <!--TELEFONO-->
+                            <div class="campo">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="600000000" maxlength="9"
+                                    required>
+                                <span class="error-msg" id="error-telefono"></span>
+                            </div>
+                            <!--EMAIL-->
+                            <div class="campo">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="juan@ejemplo.com" required>
+                                <span class="error-msg" id="error-email"></span>
+                            </div>
                         </div>
                     </div>
-                </fieldset>
-                <!--PRESUPUESTO FINAL-->
-                <fieldset>
-                    <legend>Resumen</legend>
-                    <div class="campo">
-                        <label for="presupuesto-final">Presupuesto final</label>
-                        <input type="text" name="presupuesto-final" id="presupuesto-final" value="500 €" readonly>
+                    <hr class="form-divider">
+                    <!--CONFIGURACIÓN DEL PROYECTO-->
+                    <div class="form-section">
+                        <p class="section-label">Configuración del proyecto</p>
+                        <!--PRODUCTO-->
+                        <div class="campo">
+                            <label for="producto">Tipo de producto</label>
+                            <div class="select-wrap">
+                                <select name="producto" id="producto">
+                                    <option value="500">Landing page - 500 €</option>
+                                    <option value="900">Web corporativa - 900 €</option>
+                                    <option value="1500">Tienda online - 1.500 €</option>
+                                    <option value="3000">Aplicación web - 3.000 €</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--PLAZO-->
+                        <div class="campo">
+                            <label for="plazo">
+                                Plazo de entrega (meses)
+                                <span class="descuento-badge" id="descuento-badge"></span>
+                            </label>
+                            <input type="number" id="plazo" name="plazo" min="1" max="12" value="1">
+                            <span class="campo-hint">Más de 3 meses -> 5% dto. -- Más de 6 meses -> 10% dto.</span>
+                        </div>
+                        <!--EXTRAS-->
+                        <div class="campo">
+                            <label>Servicios adicionales</label>
+                            <div class="extras-grid">
+                                <label class="extra-item">
+                                    <input type="checkbox" name="extra" class="extra" value="200">
+                                    <span class="extra-item-text">SEO Avanzado</span>
+                                    <span class="extra-item-price">+200 €</span>
+                                </label>
+                                <label class="extra-item">
+                                    <input type="checkbox" name="extra" class="extra" value="150">
+                                    <span class="extra-item-text">Blog corporativo</span>
+                                    <span class="extra-item-price">+150 €</span>
+                                </label>
+                                <label class="extra-item">
+                                    <input type="checkbox" name="extra" class="extra" value="300">
+                                    <span class="extra-item-text">Mantenimiento 1 año</span>
+                                    <span class="extra-item-price">+300 €</span>
+                                </label>
+                                <label class="extra-item">
+                                    <input type="checkbox" name="extra" class="extra" value="250">
+                                    <span class="extra-item-text">Diseño de logotipo</span>
+                                    <span class="extra-item-price">+250 €</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                </fieldset>
-                <!--CONDICIONES-->
-                <div class="condiciones">
-                    <label>
-                        <input type="checkbox" id="condiciones" required>He leído y acepto la política de privacidad.
-                    </label>
-                </div>
-                <!--BOTONES-->
-                <div class="botones-formulario">
-                    <button type="submit">Enviar presupuesto</button>
-                    <button type="reset">Vaciar formulario</button>
-                </div>
-            </form>
+                    <hr class="form-divider">
+                    <!--RESUMEN-->
+                    <div class="form-section">
+                        <p class="section-label">Resumen del presupuesto</p>
+                        <div class="resumen-card">
+                            <div>
+                                <p class="resumen-label">Presupuesto estimado</p>
+                                <p id="presupuesto-final">500 €</p>
+                                <p class="resumen-desglose" id="resumen-desglose">Base: 500 € - Extras: 0 € - Descuento:
+                                    0 €</p>
+                            </div>
+                            <span class="badge-precio">Sin IVA</span>
+                        </div>
+                    </div>
+                    <!--CONDICIONES Y ENVÍO-->
+                    <div class="condiciones">
+                        <label class="condiciones-label" id="label-condiciones">
+                            <input type="checkbox" id="condiciones" name="condiciones">
+                            He leído y acepto la <a href="#">política de privacidad</a>
+                        </label>
+                        <span class="error-msg" id="error-condiciones"></span>
+                    </div>
+                    <div class="botones-formulario">
+                        <button type="reset">Vaciar formulario</button>
+                        <button type="submit">
+                            Enviar presupuesto
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </section>
+        <!--Modal de confirmación-->
+        <div id="modal-overlay" class="modal-overlay hidden">
+            <div class="modal">
+                <div class="modal-icon">✓</div>
+                <h3>¡Presupuesto enviado!</h3>
+                <p>Nos pondremos en contacto contigo a la mayor brevedad.</p>
+                <button id="modal-cerrar">Aceptar</button>
+            </div>
+        </div>   
     </main>
     <footer>
         <div class="footer-container">
             <div class="footer-info">
                 <h3>DevSolutions</h3>
-                <p>Desarrollo de soluciones web modernas  y adaptadas a cada cliente.</p>
+                <p>Desarrollo de soluciones web modernas y adaptadas a cada cliente.</p>
             </div>
 
             <div class="footer-contacto">
@@ -147,4 +211,5 @@
         </div>
     </footer>
 </body>
+
 </html>
