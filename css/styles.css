@@ -1027,6 +1027,16 @@ footer {
     font-size: 40px;
     cursor: pointer;
 }
+/*CONTACTO*/
+/*mapa*/
+.mapa-container{
+    max-width: 1400px;
+}
+#map{
+    height: 500px;
+    width: 500px;
+    z-index: 99;
+}
 
 /*MEDIA QUERIES*/
 /*TABLET (max-width: 1024px)*/
@@ -1130,11 +1140,12 @@ footer {
     }
 
     .btn-presupuesto {
-        margin-top: 6px;
+        /* margin-top: 6px;
         padding: 6px 10px;
         text-align: center;
         border-radius: 5px;
-        font-size: 0.7rem;
+        font-size: 0.7rem; */
+        display: none;
     }
 
     /*HERO / PRESENTACIÓN*/
@@ -1283,6 +1294,12 @@ footer {
     .botones-formulario button {
         width: 100%;
         justify-content: center;
+    }
+    /*GALERIA*/
+    .galeria-container{
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
