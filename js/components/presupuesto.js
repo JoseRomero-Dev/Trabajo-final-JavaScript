@@ -16,7 +16,7 @@ const errCond = document.getElementById('error-condiciones');
 const modalOverlay = document.getElementById('modal-overlay');
 const modalCerrar = document.getElementById('modal-cerrar');
 
-// ── VALIDACIONES ────────────────────────────
+// ── VALIDACIONES
 
 const REGLAS = {
     nombre: {
