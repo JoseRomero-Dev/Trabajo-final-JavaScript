@@ -175,7 +175,7 @@ form.addEventListener('submit', function (e) {
 
     if (!contactoOk || !condOk) return;
 
-    // Todo correcto → mostrar modal
+    // Todo correcto -> mostrar modal
     modalOverlay.classList.remove('hidden');
 });
 
@@ -200,12 +200,12 @@ form.addEventListener('reset', function () {
     labelCond.classList.remove('error');
     errCond.textContent = '';
 
-    // Recalcular con valores por defecto tras el reset nativo
+    // Recalcular con valores por defecto tras el reset
     setTimeout(actualizarPresupuesto, 0);
 });
 
 
-// ── MODAl
+// ── MODAL
 
 modalCerrar.addEventListener('click', function () {
     modalOverlay.classList.add('hidden');
