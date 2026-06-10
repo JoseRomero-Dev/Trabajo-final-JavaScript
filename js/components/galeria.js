@@ -2,9 +2,9 @@ function cargarGaleria(proyectos){
     const galeriaContainer = document.querySelector('.galeria-container');
     let contenido = '';
 
-    proyectos.forEach(elemento => {
+    proyectos.forEach((elemento, index)=> {
         contenido += `
-        <article class="card-galeria">
+        <article class="card-galeria" style="animation-delay: ${index * 0.1}s">
             <img src="${elemento.imagen}" alt="${elemento.titulo}">
             <h3>${elemento.titulo}</h3>
             <p>${elemento.descripcion}</p>
