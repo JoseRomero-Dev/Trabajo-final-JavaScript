@@ -1,0 +1,54 @@
+{
+    "noticias": [
+        {
+            "titulo": "Nueva web corporativa",
+            "descripcion": "Hemos lanzado una nueva web para una empresa tecnológica.",
+            "fecha": "2025-06-01",
+            "imagen": "../assets/images/noticias/noticia_1.jpg"
+        },
+        {
+            "titulo": "Aplicación JavaScript",
+            "descripcion": "Finalizado el desarrollo de una aplicación de gestión.",
+            "fecha": "2025-06-01",
+            "imagen": "../assets/images/noticias/noticia_2.jpg"
+        },
+        {
+            "titulo": "Diseño responsive",
+            "descripcion": "Nuevo proyecto optimizado para dispositivos móviles.",
+            "fecha": "2025-06-01",
+            "imagen": "../assets/images/noticias/noticia_1.jpg"
+        }
+    ],
+    "proyectos": [
+        {
+            "titulo": "Tienda Online",
+            "descripcion": "E-commerce completo con pasarela de pago integrada.",
+            "imagen": "../assets/images/tienda_online.jpg"
+        },
+        {
+            "titulo": "Landing Page",
+            "descripcion": "Página de aterrizaje optimizada para conversión.",
+            "imagen": "../assets/images/landing.jpg"
+        },
+        {
+            "titulo": "Dashboard",
+            "descripcion": "Aplicación web para gestión de usuarios y contenidos.",
+            "imagen": "../assets/images/tienda_online.jpg"
+        },
+        {
+            "titulo": "Tienda Online",
+            "descripcion": "E-commerce completo con pasarela de pago integrada.",
+            "imagen": "../assets/images/tienda_online.jpg"
+        },
+        {
+            "titulo": "Landing Page",
+            "descripcion": "Página de aterrizaje optimizada para conversión.",
+            "imagen": "../assets/images/landing.jpg"
+        },
+        {
+            "titulo": "Dashboard",
+            "descripcion": "Aplicación web para gestión de usuarios y contenidos.",
+            "imagen": "../assets/images/tienda_online.jpg"
+        }
+    ]
+}

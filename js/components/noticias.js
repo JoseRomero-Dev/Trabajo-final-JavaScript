@@ -1,25 +1,28 @@
-fetch('./data/noticias.json')
+function cargarNoticias(noticias) {
+    const noticiasContainer = document.querySelector('.noticias-container');
+    let contenido = '';
+
+    noticias.forEach(elemento => {
+        contenido += `
+        <article class="card-noticia">
+            <img src="${elemento.imagen}" alt="${elemento.titulo}">
+            <div class="contenido-noticia">
+                <span>${elemento.fecha}</span>
+                <h3>${elemento.titulo}</h3>
+                <p>${elemento.descripcion}</p>
+            </div>
+        </article>
+        `;
+    });
+    noticiasContainer.innerHTML = contenido;
+}
+
+//Fetch de datos desde json
+fetch('../data/datos.json')
     .then(response => response.json())
-    .then(data =>{
-        const noticiasContainer = document.querySelector('.noticias-container');
-        let contenido = '';
-
-        data.noticias.forEach(noticia => {
-            contenido += `
-                <article class="card-noticia">
-                    <img src="${noticia.imagen}" alt="${noticia.titulo}">
-                    <div class="contenido-noticia">
-                        <span>${noticia.fecha}</span>
-                        <h3>${noticia.titulo}</h3>
-                        <p>${noticia.descripcion}</p>
-                    </div>
-                </article>
-            `;
-        });
-
-        noticiasContainer.innerHTML = contenido;
-
-        //Avisar al main script que las noticias estan en el DOM
+    .then(data => {
+        cargarNoticias(data.noticias)
+        //Avisar al script que las noticias estan en el DOM
         document.dispatchEvent(new Event('noticiasListas'));
     })
     .catch(error => console.error(error));
