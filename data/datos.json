@@ -38,7 +38,7 @@
             "titulo": "Diseño responsive",
             "descripcion": "Nuevo proyecto optimizado para dispositivos móviles.",
             "fecha": "2025-06-01",
-            "imagen": "../assets/images/noticias/noticia_1.jpg"
+            "imagen": "../assets/images/noticias/noticia_3.jpg"
         }
     ],
     "proyectos": [
@@ -78,5 +78,8 @@
             "imagen": "../assets/images/task_manager.jpg",
             "icono": "../assets/iconos/arrow.svg"
         }
+    ],
+    "footer": [
+        
     ]
 }
