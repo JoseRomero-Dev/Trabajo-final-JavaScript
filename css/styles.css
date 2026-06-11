@@ -170,8 +170,8 @@ nav {
 }
 
 .titulo-hero {
-    font-size: clamp(3rem, 4vw, 4.5rem);
-    line-height: 1.1;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.2;
 }
 
 .presentacion-container {

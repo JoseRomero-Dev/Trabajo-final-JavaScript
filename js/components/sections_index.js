@@ -1,12 +1,12 @@
 //SERVICIOS
-function cargarServicios(servicios){
+function cargarServicios(servicios, prefijo){
     const serviciosContainer = document.querySelector('.servicios-container');
     let contenido = '';
 
     servicios.forEach(elemento => {
         contenido += `
             <article class="card-servicio">
-                <img src="${elemento.imagen}" alt="${elemento.titulo}">
+                <img src="${prefijo}${elemento.imagen}" alt="${elemento.titulo}">
                 <h3>${elemento.titulo}</h3>
                 <p>${elemento.descripcion}</p>
             </article>
@@ -15,19 +15,19 @@ function cargarServicios(servicios){
     serviciosContainer.innerHTML = contenido;
 }
 //PROYECTOS
-function cargarProyectos(proyectos){
+function cargarProyectos(proyectos, prefijo){
     const proyectosContainer = document.querySelector('.proyectos-container');
     let contenido = '';
     //Para que solo recorra los tres primeros elementos
     proyectos.slice(0, 3).forEach(elemento => {
         contenido += `
             <article class="card-proyecto">
-                <img src="${elemento.imagen}" alt="${elemento.titulo}">
+                <img src="${prefijo}${elemento.imagen}" alt="${elemento.titulo}">
                 <h3>${elemento.titulo}</h3>
                 <p>${elemento.descripcion}</p>
                 <a class="enlace-proyecto" href="../views/galeria.html">
                     Ver proyecto
-                    <img src="${elemento.icono}" alt="Ver proyectos">
+                    <img src="${prefijo}${elemento.icono}" alt="Ver proyectos">
                 </a>
             </article>
         `
@@ -36,14 +36,14 @@ function cargarProyectos(proyectos){
 }
 
 //NOTICIAS
-function cargarNoticias(noticias) {
+function cargarNoticias(noticias, prefijo) {
     const noticiasContainer = document.querySelector('.noticias-container');
     let contenido = '';
 
     noticias.forEach(elemento => {
         contenido += `
         <article class="card-noticia">
-            <img src="${elemento.imagen}" alt="${elemento.titulo}">
+            <img src="${prefijo}${elemento.imagen}" alt="${elemento.titulo}">
             <div class="contenido-noticia">
                 <span>${elemento.fecha}</span>
                 <h3>${elemento.titulo}</h3>
@@ -54,15 +54,15 @@ function cargarNoticias(noticias) {
     });
     noticiasContainer.innerHTML = contenido;
 }
-
+const PREFIJO = './';
 //Fetch de datos desde json
-fetch('../data/datos.json')
+fetch('./data/datos.json')
     .then(response => response.json())
     .then(data => {
-        cargarServicios(data.servicios);
-        cargarProyectos(data.proyectos)
-        cargarNoticias(data.noticias);
-        //Avisar al script que las noticias,servicios estan en el DOM
+        cargarServicios(data.servicios, PREFIJO);
+        cargarProyectos(data.proyectos, PREFIJO)
+        cargarNoticias(data.noticias, PREFIJO);
+        //Avisar al script que las noticias,servicios,proyectos estan en el DOM
         document.dispatchEvent(new Event('elementosCargados'));
     })
     .catch(error => console.error(error));
