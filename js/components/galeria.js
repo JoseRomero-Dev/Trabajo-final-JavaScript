@@ -10,7 +10,7 @@ function cargarGaleria(proyectos){
             <p>${elemento.descripcion}</p>
             <a class="enlace-galeria" href="#">
                 Ver más
-                <img src="../assets/iconos/arrow.svg" alt="Ver más">
+                <img src="${elemento.icono}" alt="Ver más">
             </a>
         </article>
         `;

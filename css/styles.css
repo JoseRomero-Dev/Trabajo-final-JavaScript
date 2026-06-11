@@ -1225,6 +1225,8 @@ footer {
     .servicios-container {
         grid-template-columns: 1fr;
         gap: 1.2rem;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .card-servicio {
@@ -1241,6 +1243,8 @@ footer {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         align-items: start;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .card-proyecto {
