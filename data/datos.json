@@ -78,8 +78,5 @@
             "imagen": "../assets/images/task_manager.jpg",
             "icono": "../assets/iconos/arrow.svg"
         }
-    ],
-    "footer": [
-        
     ]
 }
