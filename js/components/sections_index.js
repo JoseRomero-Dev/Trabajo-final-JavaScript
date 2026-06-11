@@ -25,7 +25,7 @@ function cargarProyectos(proyectos, prefijo){
                 <img src="${prefijo}${elemento.imagen}" alt="${elemento.titulo}">
                 <h3>${elemento.titulo}</h3>
                 <p>${elemento.descripcion}</p>
-                <a class="enlace-proyecto" href="../views/galeria.html">
+                <a class="enlace-proyecto" href="${prefijo}${elemento.enlace}">
                     Ver proyecto
                     <img src="${prefijo}${elemento.icono}" alt="Ver proyectos">
                 </a>
