@@ -43,7 +43,7 @@ window.addEventListener('scroll', () => {
     mostrarElements();
 });
 //Avisamos de que las noticias estan cargadas
-document.addEventListener('noticiasListas', () => {
+document.addEventListener('elementosCargados', () => {
     elements = document.querySelectorAll('.titulo, .card-servicio, .card-proyecto, .card-noticia');
     mostrarElements();
 });

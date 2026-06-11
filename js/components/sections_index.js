@@ -1,3 +1,20 @@
+function cargarServicios(servicios){
+    const serviciosContainer = document.querySelector('.servicios-container');
+    let contenido = '';
+
+    servicios.forEach(elemento => {
+        contenido += `
+            <article class="card-servicio">
+                <img src="${elemento.imagen}" alt="${elemento.titulo}">
+                <h3>${elemento.titulo}</h3>
+                <p>${elemento.descripcion}</p>
+            </article>
+        `;
+    });
+    serviciosContainer.innerHTML = contenido;
+}
+
+//NOTICIAS
 function cargarNoticias(noticias) {
     const noticiasContainer = document.querySelector('.noticias-container');
     let contenido = '';
@@ -21,8 +38,9 @@ function cargarNoticias(noticias) {
 fetch('../data/datos.json')
     .then(response => response.json())
     .then(data => {
-        cargarNoticias(data.noticias)
-        //Avisar al script que las noticias estan en el DOM
-        document.dispatchEvent(new Event('noticiasListas'));
+        cargarServicios(data.servicios);
+        cargarNoticias(data.noticias);
+        //Avisar al script que las noticias,servicios estan en el DOM
+        document.dispatchEvent(new Event('elementosCargados'));
     })
     .catch(error => console.error(error));

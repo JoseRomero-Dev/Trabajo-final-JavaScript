@@ -1,4 +1,26 @@
 {
+    "servicios": [
+        {
+            "imagen": "../assets/iconos/code.svg",
+            "titulo": "Desarrollo Web",
+            "descripcion": "Creamos páginas web modernas y funcionales a medida."
+        },
+        {
+            "imagen": "../assets/iconos/mobile.svg",
+            "titulo": "Diseño responsive",
+            "descripcion": "Diseños adaptados a todos los dispositivos para una mejor experiencia."
+        },
+        {
+            "imagen": "../assets/iconos/desktop.svg",
+            "titulo": "Aplicaciones JS",
+            "descripcion": "Desarrollamos aplicaciones interactivas con las ultimas tecnologías." 
+        },
+        {
+            "imagen": "../assets/iconos/gear.svg",
+            "titulo": "Mantenimiento",
+            "descripcion": "Actualizamos y optimizamos tu web para que siempre funcione al 100%."
+        }
+    ],
     "noticias": [
         {
             "titulo": "Nueva web corporativa",
