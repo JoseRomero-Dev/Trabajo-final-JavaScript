@@ -16,7 +16,7 @@
             "descripcion": "Desarrollamos aplicaciones interactivas con las ultimas tecnologías." 
         },
         {
-            "imagen": ".assets/iconos/gear.svg",
+            "imagen": "assets/iconos/gear.svg",
             "titulo": "Mantenimiento",
             "descripcion": "Actualizamos y optimizamos tu web para que siempre funcione al 100%."
         }
