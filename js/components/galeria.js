@@ -18,12 +18,15 @@ function cargarGaleria(proyectos, prefijo){
     galeriaContainer.innerHTML = contenido;
 }
 
-const PREFIJO = '../';
+const BASE = window.location.pathname.includes('/Trabajo-final-JavaScript/')
+    ? 'Trabajo-final-JavaScript'
+    : '/';
+//Prefijo '../' => rutas relativas desde views/galeria.html
 //fetch
-fetch('../data/datos.json')
+fetch(`${BASE}data/datos.json`)
     .then(response => response.json())
     .then(data => {
-        cargarGaleria(data.proyectos, PREFIJO);
+        cargarGaleria(data.proyectos, BASE);
     })
     .catch(error => console.error(error))
 

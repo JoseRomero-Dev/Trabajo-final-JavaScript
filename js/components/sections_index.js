@@ -54,14 +54,16 @@ function cargarNoticias(noticias, prefijo) {
     });
     noticiasContainer.innerHTML = contenido;
 }
-const PREFIJO = './';
+const BASE = window.location.pathname.includes('/Trabajo-final-JavaScript/')
+    ? '/Trabajo-final-JavaScript/'
+    : '/';
 //Fetch de datos desde json
-fetch('./data/datos.json')
+fetch(`${BASE}data/datos.json`)
     .then(response => response.json())
     .then(data => {
-        cargarServicios(data.servicios, PREFIJO);
-        cargarProyectos(data.proyectos, PREFIJO)
-        cargarNoticias(data.noticias, PREFIJO);
+        cargarServicios(data.servicios, BASE);
+        cargarProyectos(data.proyectos, BASE)
+        cargarNoticias(data.noticias, BASE);
         //Avisar al script que las noticias,servicios,proyectos estan en el DOM
         document.dispatchEvent(new Event('elementosCargados'));
     })
