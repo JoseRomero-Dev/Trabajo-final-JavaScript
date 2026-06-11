@@ -12,6 +12,8 @@
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js" defer></script>
     <!--Link a pagina de estilos CSS-->
     <link rel="stylesheet" href="../css/styles.css">
+    <!--CSS Iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <!--CSS Mapas-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
@@ -41,8 +43,49 @@
     <main>
         <section class="section">
             <h2 class="titulo-contacto"><span>Contacto</span></h2>
-            <div class="mapa-container">
-                <div id="map"></div>
+            <div class="contacto-container">
+                <article class="info-contacto">
+                    <h3>Información de contacto</h3>
+                    <div class="dato-contacto">
+                        <div class="dato-icon">
+                            <i class="ti ti-map-pin"></i>
+                        </div>
+                        <div class="dato-texto">
+                            <h4>Dirección</h4>
+                            <p>Calle Principal 123, Sevilla</p>
+                        </div>
+                    </div>
+                    <div class="dato-contacto">
+                        <div class="dato-icon">
+                            <i class="ti ti-phone"></i>
+                        </div>
+                        <div class="dato-texto">
+                            <h4>Teléfono</h4>
+                            <p>955 123 456</p>
+                        </div>
+                    </div>
+                    <div class="dato-contacto">
+                        <div class="dato-icon">
+                            <i class="ti ti-mail"></i>
+                        </div>
+                        <div class="dato-texto">
+                            <h4>Correo electrónico</h4>
+                            <p>info@devsolutions.com</p>
+                        </div>
+                    </div>
+                    <div class="dato-contacto">
+                        <div class="dato-icon">
+                            <i class="ti ti-clock"></i>
+                        </div>
+                        <div class="dato-texto">
+                            <h4>Horario</h4>
+                            <p>Lunes a Viernes: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                </article>
+                <div class="mapa-container">
+                    <div id="map"></div>
+                </div>
             </div>
         </section>
     </main>
