@@ -18,10 +18,11 @@ function cargarGaleria(proyectos, prefijo){
     galeriaContainer.innerHTML = contenido;
 }
 
+//Le decimos la ruta del json cuando esta en GitHub Pages o lo cargamos desde servidor local para el desarrollo
 const BASE = window.location.pathname.includes('/Trabajo-final-JavaScript/')
-    ? 'Trabajo-final-JavaScript'
+    ? '/Trabajo-final-JavaScript/'
     : '/';
-//Prefijo '../' => rutas relativas desde views/galeria.html
+
 //fetch
 fetch(`${BASE}data/datos.json`)
     .then(response => response.json())
