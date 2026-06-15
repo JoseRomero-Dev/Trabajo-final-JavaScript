@@ -24,7 +24,7 @@ function cargarGaleria(proyectos){
 //     : '/';
 
 //fetch
-fetch(`data/datos.json`)
+fetch('data/datos.json')
     .then(response => response.json())
     .then(data => {
         cargarGaleria(data.proyectos);
