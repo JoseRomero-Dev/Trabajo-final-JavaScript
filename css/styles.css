@@ -1058,48 +1058,82 @@ footer {
 }
 
 /*CONTACTO*/
+.titulo-contacto{
+    color: var(--text-color-secundary);
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 35px;
+    margin-top: 30px;
+}
+.titulo-contacto span{
+    border-bottom: 2px solid black;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+#contacto-section{
+    padding: 40px 20px 60px;
+    background-color: #fff;
+}
 .contacto-container{
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
     align-items: stretch;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 .info-contacto{
     background: #fff;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
 }
 .info-contacto h3{
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 700;
     margin: 0 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #1960d2;
 }
 .dato-contacto{
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    padding: 12px 0;
+    gap: 14px;
+    padding: 14px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s;
 }
 .dato-contacto:last-child{
     border-bottom: none;
     padding-bottom: 0;
 }
 .dato-icon{
-    font-size: 18px;
-    color: #185fa5;
+    font-size: 20px;
+    color: #1960d2;
+    width: 36px;
+    height: 36px;
+    background: #eef3fd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 .dato-texto h4{
-    font-size: 13px;
-    font-weight: 500;
-    color: #666;
-    margin: 0 0 2px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #9ca3af;
+    margin: 0 0 3px;
 }
 .dato-texto p{
     font-size: 14px;
     color: #222;
     margin: 0;
+    font-weight: 500;
 }
 
 /*mapa*/
@@ -1107,11 +1141,13 @@ footer {
     width: 100%;
     max-width: 1400px;
     overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 #map{
     width: 100%;
     height: 100%;
-    min-height: 360px;
+    min-height: 450px;
     border-radius: 12px;
     z-index: 99;
 }
@@ -1395,7 +1431,7 @@ footer {
         grid-template-columns: 1fr;
     }
     #map{
-        min-height: 280px;
+        min-height: 300px;
     }
 }
 
