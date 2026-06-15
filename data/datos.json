@@ -52,36 +52,36 @@
         {
             "titulo": "Landing Page",
             "descripcion": "Página de aterrizaje optimizada para conversión.",
-            "imagen": "/assets/images/landing.jpg",
-            "icono": "/assets/iconos/arrow.svg",
+            "imagen": "assets/images/landing.jpg",
+            "icono": "assets/iconos/arrow.svg",
             "enlace": "views/galeria.html"
         },
         {
             "titulo": "Sistema de reservas",
             "descripcion": "Plataforma para gestionar reservas online, disponibilidad y confirmaciones de citas.",
-            "imagen": "/assets/images/reservas.png",
-            "icono": "/assets/iconos/arrow.svg",
+            "imagen": "assets/images/reservas.png",
+            "icono": "assets/iconos/arrow.svg",
             "enlace": "views/galeria.html"
         },
         {
             "titulo": "Dashboard",
             "descripcion": "Aplicación web para gestión de usuarios y contenidos.",
-            "imagen": "/assets/images/dashboard.jpg",
-            "icono": "/assets/iconos/arrow.svg",
+            "imagen": "assets/images/dashboard.jpg",
+            "icono": "assets/iconos/arrow.svg",
             "enlace": "views/galeria.html"
         },
         {
             "titulo": "Weather app",
             "descripcion": "Aplicación conectada a una API externa para consultar previsiones meteorológicas en tiempo real.",
-            "imagen": "/assets/images/web_clima.png",
-            "icono": "/assets/iconos/arrow.svg",
+            "imagen": "assets/images/web_clima.png",
+            "icono": "assets/iconos/arrow.svg",
             "enlace": "views/galeria.html"
         },
         {
             "titulo": "Task manager",
             "descripcion": "Aplicación web para organizar tareas, categorias y propiedades mediante una interfaz intuitiva.",
-            "imagen": "/assets/images/task_manager.jpg",
-            "icono": "/assets/iconos/arrow.svg",
+            "imagen": "assets/images/task_manager.jpg",
+            "icono": "assets/iconos/arrow.svg",
             "enlace": "views/galeria.html"
         }
     ]
