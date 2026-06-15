@@ -45,8 +45,8 @@
         {
             "titulo": "Tienda Online",
             "descripcion": "E-commerce completo con pasarela de pago integrada.",
-            "imagen": "/assets/images/tienda_online.jpg",
-            "icono": "/assets/iconos/arrow.svg",
+            "imagen": "assets/images/tienda_online.jpg",
+            "icono": "assets/iconos/arrow.svg",
             "enlace": "views/galeria.html"
         },
         {
