@@ -5,12 +5,12 @@ function cargarGaleria(proyectos){
     proyectos.forEach((elemento, index)=> {
         contenido += `
         <article class="card-galeria" style="animation-delay: ${index * 0.1}s">
-            <img src="${elemento.imagen}" alt="${elemento.titulo}">
+            <img src="../${elemento.imagen}" alt="${elemento.titulo}">
             <h3>${elemento.titulo}</h3>
             <p>${elemento.descripcion}</p>
             <a class="enlace-galeria" href="#">
                 Ver más
-                <img src="${elemento.icono}" alt="Ver más">
+                <img src="../${elemento.icono}" alt="Ver más">
             </a>
         </article>
         `;
