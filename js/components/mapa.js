@@ -32,8 +32,10 @@ function success(position){
             L.latLng(37.392524, -6.002147)
         ],
         language: 'es',
-        collapsed: true
+        collapsible: true
     }).addTo(map);
+    //Oculta el desplegable de la ruta al cargar
+    control.hide();
 }
 function error(err){
     console.error(err);
@@ -50,6 +52,7 @@ function error(err){
         default:
             alert('Error desconocido');
     }
+    //Muestra el mapa si hay error con la ubicacion de la empresa pero sin calcular la ruta
     let map = L.map('map',{
         center:[37.392524, -6.002147],
         zoom:14
