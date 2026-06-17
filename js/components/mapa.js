@@ -3,7 +3,7 @@
 let options = {
     //Hacemos que calcule la posición mas exacta posible
     enableHighAccuracy : true,
-    timeout: 5000,
+    timeout: 20000,
     maximumAge: 0
 }
 if(navigator.geolocation){
@@ -37,5 +37,17 @@ function success(position){
 }
 function error(err){
     console.error(err);
-    alert('No se pudo obtener tu ubicación.');
+    switch(err.code){
+        case 1:
+            alert('Permiso de ubicación denegado');
+            break;
+        case 2: 
+            alert('Ubicación no disponible');
+            break;
+        case 3: 
+            alert('Tiempo de espera agotado');
+            break;
+        default:
+            alert('Error desconocido');
+    }
 }
