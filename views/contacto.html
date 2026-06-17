@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | DevSolutions</title>
     <!--Enlace a JavaScript-->
-    <script src="../js/components/footer.js" defer></script>
+    <script src="../js/components/contacto.js" defer></script>
     <script src="../js/components/mapa.js" defer></script>
+    <script src="../js/components/footer.js" defer></script>
     <script src="../js/script.js" defer></script>
     <!--Scripts mapa-->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
@@ -45,45 +46,7 @@
         <section class="section" id="contacto-section">
             <h2 class="titulo-contacto"><span>Contacto</span></h2>
             <div class="contacto-container">
-                <article class="info-contacto">
-                    <h3>Información de contacto</h3>
-                    <div class="dato-contacto">
-                        <div class="dato-icon">
-                            <i class="ti ti-map-pin"></i>
-                        </div>
-                        <div class="dato-texto">
-                            <h4>Dirección</h4>
-                            <p>Calle Principal 123, Sevilla</p>
-                        </div>
-                    </div>
-                    <div class="dato-contacto">
-                        <div class="dato-icon">
-                            <i class="ti ti-phone"></i>
-                        </div>
-                        <div class="dato-texto">
-                            <h4>Teléfono</h4>
-                            <p>955 123 456</p>
-                        </div>
-                    </div>
-                    <div class="dato-contacto">
-                        <div class="dato-icon">
-                            <i class="ti ti-mail"></i>
-                        </div>
-                        <div class="dato-texto">
-                            <h4>Correo electrónico</h4>
-                            <p>info@devsolutions.com</p>
-                        </div>
-                    </div>
-                    <div class="dato-contacto">
-                        <div class="dato-icon">
-                            <i class="ti ti-clock"></i>
-                        </div>
-                        <div class="dato-texto">
-                            <h4>Horario</h4>
-                            <p>Lunes a Viernes: 9:00 - 18:00</p>
-                        </div>
-                    </div>
-                </article>
+                <article class="info-contacto"><!--Se carga dinámicamente--></article>
                 <div class="mapa-container">
                     <div id="map"></div>
                 </div>

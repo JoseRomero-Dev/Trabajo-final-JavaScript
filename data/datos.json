@@ -32,19 +32,19 @@
         {
             "titulo": "Nueva web corporativa",
             "descripcion": "Hemos lanzado una nueva web para una empresa tecnológica.",
-            "fecha": "2025-06-01",
+            "fecha": "2026-06-01",
             "imagen": "assets/images/noticias/noticia_1.jpg"
         },
         {
             "titulo": "Aplicación JavaScript",
             "descripcion": "Finalizado el desarrollo de una aplicación de gestión.",
-            "fecha": "2025-06-01",
+            "fecha": "2026-05-15",
             "imagen": "assets/images/noticias/noticia_2.jpg"
         },
         {
             "titulo": "Diseño responsive",
             "descripcion": "Nuevo proyecto optimizado para dispositivos móviles.",
-            "fecha": "2025-06-01",
+            "fecha": "2026-03-06",
             "imagen": "assets/images/noticias/noticia_3.jpg"
         }
     ],
@@ -110,7 +110,15 @@
     ],
     "contacto":[
         {
-            "titulo": "Información de contacto"
+            "titulo": "Información de contacto",
+            "tituloDireccion": "Dirección",
+            "direccion": "Calle Principal 123, Sevilla",
+            "tituloTelefono": "Teléfono",
+            "telefono": "955 123 456",
+            "tituloEmail": "Correo electrónico",
+            "email": "info@devsolutions.com",
+            "tituloHorario": "Horario",
+            "horario": "Lunes a Viernes: 9:00 - 18:00"
         }
     ]
 }
