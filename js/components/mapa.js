@@ -6,6 +6,22 @@ let options = {
     timeout: 20000,
     maximumAge: 0
 }
+
+//Icono usuario(azul)
+const usuarioIcon = L.icon({
+    iconUrl: '../assets/iconos/marker_blue.svg',
+    iconSize: [32, 48],
+    iconAnchor: [16, 48],
+    popupAnchor: [0, -45]
+});
+
+//Icono empresa(rojo)
+const empresaIcon = L.icon({
+    iconUrl: '../assets/iconos/marker_red.svg',
+    iconSize: [32, 48],
+    iconAnchor: [16, 48],
+    popupAnchor: [0, -45]
+})
 if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(
         success,
@@ -32,7 +48,23 @@ function success(position){
             L.latLng(37.392524, -6.002147)
         ],
         language: 'es',
-        collapsible: true
+        collapsible: true,
+
+        createMarker: function(i, wp){
+            //Mi ubicación
+            if(i === 0){
+                return L.marker(wp.latLng, {
+                    icon: usuarioIcon,
+                    draggable: true
+                }).bindPopup('Tu ubicación');
+            }
+            if(i === 1) {
+                return L.marker(wp.latLng, {
+                    icon: empresaIcon,
+                    draggable: true
+                }).bindPopup('DevSolutions');
+            }
+        }
     }).addTo(map);
     //Oculta el desplegable de la ruta al cargar
     control.hide();
@@ -63,7 +95,7 @@ function error(err){
         { attribution:'DevSolutions' }
     ).addTo(map);
 
-    L.marker([37.392524, -6.002147])
+    L.marker([37.392524, -6.002147], { icon: empresaIcon })
         .addTo(map)
         .bindPopup('DevSolutions');
 }
