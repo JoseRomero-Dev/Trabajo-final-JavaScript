@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
 /*Variables*/
 :root {
     --background-color-primary: #000000;
@@ -24,8 +26,10 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-family: 'Inter', sans-serif;
+}
+h1,h2,h3,h4{
+    font-family: 'Poppins', sans-serif;
 }
 
 /*NAVBAR*/
