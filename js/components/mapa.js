@@ -39,7 +39,7 @@ function error(err){
     console.error(err);
     switch(err.code){
         case 1:
-            alert('Permiso de ubicación denegado');
+            alert('Permiso de ubicación denegado. Mostrando ubicación de la empresa.');
             break;
         case 2: 
             alert('Ubicación no disponible');
@@ -50,4 +50,17 @@ function error(err){
         default:
             alert('Error desconocido');
     }
+    let map = L.map('map',{
+        center:[37.392524, -6.002147],
+        zoom:14
+    });
+
+    L.tileLayer(
+        'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+        { attribution:'DevSolutions' }
+    ).addTo(map);
+
+    L.marker([37.392524, -6.002147])
+        .addTo(map)
+        .bindPopup('DevSolutions');
 }
