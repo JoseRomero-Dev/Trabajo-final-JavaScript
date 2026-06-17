@@ -1411,6 +1411,12 @@ footer {
         align-items: flex-start;
         gap: 12px;
     }
+    .condiciones-label{
+        align-items: flex-start;
+    }
+    .condiciones-label input[type="checkbox"]{
+        margin-top: 2px;
+    }
 
     .botones-formulario {
         flex-direction: column-reverse;
