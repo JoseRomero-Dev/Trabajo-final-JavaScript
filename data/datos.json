@@ -91,5 +91,26 @@
             "icono": "assets/iconos/arrow.svg",
             "enlace": "views/galeria.html"
         }
+    ],
+    "footer":[
+        {
+            "titulo1": "DevSolutions",
+            "descripcion": "Desarrollo de soluciones web modernas y adaptadas a cada cliente.",
+            "titulo2": "Contacto",
+            "direccion": "Calle Principal 123",
+            "subdireccion": "Sevilla, España",
+            "titulo3": "Redes Sociales",
+            "instagram": "https://www.instagram.com/",
+            "github": "https://github.com/",
+            "linkedin": "https://es.linkedin.com/",
+            "iconoInstagram": "assets/iconos/instagram.svg",
+            "iconoGithub": "assets/iconos/github.svg",
+            "iconoLinkedin": "assets/iconos/linkedin.svg"
+        }
+    ],
+    "contacto":[
+        {
+            "titulo": "Información de contacto"
+        }
     ]
 }
