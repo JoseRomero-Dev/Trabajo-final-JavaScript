@@ -54,10 +54,7 @@ function cargarNoticias(noticias) {
     });
     noticiasContainer.innerHTML = contenido;
 }
-//Le decimos la ruta del json cuando esta en GitHub Pages o lo cargamos desde servidor local para el desarrollo
-// const BASE = window.location.pathname.includes('/Trabajo-final-JavaScript/')
-//     ? '/Trabajo-final-JavaScript/'
-//     : '/';
+
 //Fetch de datos desde json
 fetch(`data/datos.json`)
     .then(response => response.json())

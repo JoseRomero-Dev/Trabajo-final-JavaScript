@@ -31,7 +31,8 @@ function success(position){
             L.latLng(latitude, longitude),
             L.latLng(37.392524, -6.002147)
         ],
-        language: 'es'
+        language: 'es',
+        collapsed: true
     }).addTo(map);
 }
 function error(err){
