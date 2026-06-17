@@ -18,11 +18,6 @@ function cargarGaleria(proyectos){
     galeriaContainer.innerHTML = contenido;
 }
 
-//Le decimos la ruta del json cuando esta en GitHub Pages o lo cargamos desde servidor local para el desarrollo
-// const BASE = window.location.pathname.includes('/Trabajo-final-JavaScript/')
-//     ? '/Trabajo-final-JavaScript/'
-//     : '/';
-
 //fetch
 fetch('../data/datos.json')
     .then(response => response.json())
