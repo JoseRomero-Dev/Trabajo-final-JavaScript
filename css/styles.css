@@ -33,8 +33,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    color: #fff;
-    background-color: #000000;
+    color: var(--text-color-primary);
+    background-color: var(--background-color-primary);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(0);
 }
@@ -45,7 +45,7 @@ header.scrolled {
 }
 
 nav {
-    color: #fff;
+    color: var(--text-color-primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,7 +144,7 @@ nav {
 .titulo span {
     display: inline-block;
     padding-bottom: 8px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--text-color-secundary);
 }
 
 .section {
@@ -195,23 +195,23 @@ nav {
     text-decoration: none;
     color: var(--a-link);
     padding: 8px 15px;
-    border: 2px solid white;
+    border: 2px solid var(--text-color-primary);
     border-radius: 8px;
     transition: .3s;
 }
 
 .btn-presentacion:hover {
     /*efecto*/
-    background-color: white;
-    color: black;
+    background-color: var(--background-color-secondary);
+    color: var(--text-color-secundary);
 }
 
 /*SERVICIOS*/
 
 #servicios {
     padding-top: 40px;
-    background-color: #fff;
-    color: #000000;
+    background-color: var(--background-color-secondary);
+    color: var(--text-color-secundary);
 }
 
 .servicios-container {
@@ -233,7 +233,7 @@ nav {
     gap: 20px;
     padding: 2rem;
 
-    background-color: white;
+    background-color: var(--background-color-secondary);
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, .8);
     cursor: pointer;
@@ -273,8 +273,8 @@ nav {
 /*PROYECTOS*/
 #proyectos {
     padding-top: 40px;
-    background-color: #fff;
-    color: #000000;
+    background-color: var(--background-color-secondary);
+    color: var(--text-color-secundary);
 }
 
 .proyectos-container {
@@ -335,7 +335,7 @@ nav {
     gap: 8px;
     align-items: center;
     text-decoration: none;
-    color: #1960d2;
+    color: var(--a-link-hover);
     font-weight: 600;
     width: fit-content;
     margin: 0 10px 15px 15px;
@@ -352,7 +352,7 @@ nav {
 #noticias {
     padding-top: 40px;
     padding-bottom: 50px;
-    background-color: #fff;
+    background-color: var(--background-color-secondary);
 }
 
 .noticias-container {
@@ -411,7 +411,7 @@ nav {
 
 .contenido-noticia h3 {
     font-size: 1.1rem;
-    color: black;
+    color: var(--text-color-secundary);
 }
 
 .contenido-noticia p {
@@ -421,8 +421,8 @@ nav {
 
 /*FOOTER*/
 footer {
-    background-color: #000;
-    color: white;
+    background-color: var(--background-color-primary);
+    color: var(--text-color-primary);
 
     padding-top: 35px;
 }
@@ -494,7 +494,7 @@ footer {
 .titulo-form {
     text-align: center;
     font-size: 2rem;
-    color: #fff;
+    color: var(--text-color-primary);
     margin-bottom: 32px;
 }
 
@@ -512,7 +512,7 @@ footer {
 #formulario-presupuesto {
     max-width: 700px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: var(--background-color-secondary);
     border-radius: 16px;
     box-shadow: 0 24px 64px rgba(0, 0, 0, .35);
     overflow: hidden;
@@ -524,7 +524,7 @@ footer {
    ============================================= */
 
 .form-header {
-    background-color: #0f4fb8;
+    background-color: var(--a-link-hover);
     padding: 28px 32px 24px;
 }
 
@@ -540,7 +540,7 @@ footer {
 .form-header h3 {
     font-size: 22px;
     font-weight: 600;
-    color: #fff;
+    color: var(--text-color-primary);
 }
 
 
@@ -566,7 +566,7 @@ footer {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #9ca3af;
+    color: #929bac;
     margin-bottom: 14px;
 }
 
@@ -619,7 +619,7 @@ footer {
     font-size: 15px;
     font-family: inherit;
     color: #111827;
-    background-color: #fff;
+    background-color: var(--background-color-secondary);
     transition: border-color .2s, box-shadow .2s;
     appearance: none;
     -webkit-appearance: none;
@@ -633,7 +633,7 @@ footer {
 .campo input:focus,
 .campo select:focus {
     outline: none;
-    border-color: #1960d2;
+    border-color: var(--a-link-hover);
     box-shadow: 0 0 0 3px rgba(25, 96, 210, .12);
 }
 
@@ -717,7 +717,6 @@ footer {
     padding: 12px 14px;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
-    cursor: pointer;
     transition: border-color .2s, background-color .2s;
 }
 
@@ -727,14 +726,14 @@ footer {
 }
 
 .extra-item:has(input:checked) {
-    border-color: #1960d2;
+    border-color: var(--a-link-hover);
     background-color: #eef3fd;
 }
 
 .extra-item input[type="checkbox"] {
     width: 16px;
     height: 16px;
-    accent-color: #1960d2;
+    accent-color: var(--a-link-hover);
     flex-shrink: 0;
     cursor: pointer;
     appearance: auto;
@@ -749,7 +748,7 @@ footer {
 .extra-item-price {
     font-size: 13px;
     font-weight: 600;
-    color: #1960d2;
+    color: var(--a-link-hover);
 }
 
 
@@ -776,7 +775,7 @@ footer {
 #presupuesto-final {
     font-size: 30px;
     font-weight: 700;
-    color: #111827;
+    color: var(--text-color-secundary);
 }
 
 .resumen-desglose {
@@ -787,7 +786,7 @@ footer {
 
 .badge-precio {
     background-color: #eef3fd;
-    color: #1960d2;
+    color: var(--a-link-hover);
     font-size: 12px;
     font-weight: 600;
     padding: 5px 12px;
@@ -816,14 +815,14 @@ footer {
 }
 
 .condiciones-label input[type="checkbox"] {
-    accent-color: #1960d2;
+    accent-color: var(--a-link-hover);
     width: 15px;
     height: 15px;
     flex-shrink: 0;
 }
 
 .condiciones-label a {
-    color: #1960d2;
+    color: var(--a-link-hover);
     text-decoration: none;
 }
 
@@ -867,8 +866,8 @@ footer {
 }
 
 .botones-formulario button[type="submit"] {
-    background-color: #1960d2;
-    color: #fff;
+    background-color: var(--a-link-hover);
+    color: var(--text-color-primary);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -910,7 +909,7 @@ footer {
 }
 
 .modal {
-    background: #fff;
+    background: var(--background-color-secondary);
     border-radius: 16px;
     padding: 40px 36px;
     text-align: center;
@@ -945,8 +944,8 @@ footer {
 }
 
 .modal button {
-    background: #1960d2;
-    color: #fff;
+    background: var(--a-link-hover);
+    color: var(--text-color-primary);
     border: none;
     border-radius: 8px;
     padding: 10px 28px;
@@ -980,7 +979,7 @@ footer {
     margin-top: 30px;
 }
 .titulo-galeria span{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--text-color-secundary);
     padding-bottom: 8px;
     display: inline-block;
 }
@@ -1044,7 +1043,7 @@ footer {
     gap: 8px;
     align-items: center;
     text-decoration: none;
-    color: #1960d2;
+    color: var(--a-link-hover);
     font-weight: 600;
     width: fit-content;
     margin: 0 10px 15px 15px;
@@ -1066,13 +1065,13 @@ footer {
     margin-top: 30px;
 }
 .titulo-contacto span{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--text-color-secundary);
     padding-bottom: 8px;
     display: inline-block;
 }
 #contacto-section{
     padding: 40px 20px 60px;
-    background-color: #fff;
+    background-color: var(--background-color-secondary);
 }
 .contacto-container{
     display: grid;
@@ -1083,7 +1082,7 @@ footer {
     margin: 0 auto;
 }
 .info-contacto{
-    background: #fff;
+    background: var(--background-color-secondary);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -1237,7 +1236,7 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #000;
+        background-color: var(--background-color-primary);
         padding: 10px 20px 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         z-index: 99;
@@ -1259,11 +1258,6 @@ footer {
     }
 
     .btn-presupuesto {
-        /* margin-top: 6px;
-        padding: 6px 10px;
-        text-align: center;
-        border-radius: 5px;
-        font-size: 0.7rem; */
         display: none;
     }
 
