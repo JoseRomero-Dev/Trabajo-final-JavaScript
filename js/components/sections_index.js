@@ -12,6 +12,7 @@ function cargarPresentacion(presentacion){
     });
     presentacionContainer.innerHTML = contenido;
 }
+
 //SERVICIOS
 function cargarServicios(servicios){
     const serviciosContainer = document.querySelector('.servicios-container');
@@ -28,6 +29,7 @@ function cargarServicios(servicios){
     });
     serviciosContainer.innerHTML = contenido;
 }
+
 //PROYECTOS
 function cargarProyectos(proyectos){
     const proyectosContainer = document.querySelector('.proyectos-container');
@@ -68,6 +70,7 @@ function cargarNoticias(noticias) {
     });
     noticiasContainer.innerHTML = contenido;
 }
+
 //FOOTER
 function cargarFooter(footer){
     const footerContainer = document.querySelector('.footer-container');
@@ -101,7 +104,6 @@ function cargarFooter(footer){
             </div>
         `
     });
-
     footerContainer.innerHTML = contenido;
 }
 
