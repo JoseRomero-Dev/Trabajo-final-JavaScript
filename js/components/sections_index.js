@@ -1,18 +1,3 @@
-//PRESENTACIÓN
-function cargarPresentacion(presentacion){
-    const presentacionContainer = document.querySelector('.presentacion-container');
-    let contenido = '';
-
-    presentacion.forEach(elemento => {
-        contenido += `
-            <h2 class="titulo-hero">${elemento.titulo}</h2>
-            <p>${elemento.descripcion}</p>
-            <a href="./views/contacto.html" class="btn-presentacion">${elemento.boton}</a>
-        `
-    });
-    presentacionContainer.innerHTML = contenido;
-}
-
 //SERVICIOS
 function cargarServicios(servicios){
     const serviciosContainer = document.querySelector('.servicios-container');
@@ -111,7 +96,6 @@ function cargarFooter(footer){
 fetch(`data/datos.json`)
     .then(response => response.json())
     .then(data => {
-        cargarPresentacion(data.presentacion);
         cargarServicios(data.servicios);
         cargarProyectos(data.proyectos)
         cargarNoticias(data.noticias);

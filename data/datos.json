@@ -1,11 +1,4 @@
 {
-    "presentacion":[
-        {
-            "titulo": "Desarrollamos soluciones web que impulsan tu negocio",
-            "descripcion": "Creamos sitios web modernos, rápidos y seguros adaptados a tus necesidades",
-            "boton": "Contactar"
-        }
-    ],
     "servicios": [
         {
             "imagen": "assets/iconos/code.svg",
