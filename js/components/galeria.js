@@ -25,7 +25,7 @@ const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
 const dotsContainer = document.getElementById('dots-container');
 
-let proyectos = [];
+let instalaciones = [];
 let currentIndex = 0;
 let startX = 0; //Posicion inicial del ratón
 let isDragging = false; //Para detectar si el raton esta siendo arrastrado
@@ -42,30 +42,30 @@ cajas.forEach((caja) => {
 });
 
 function updateCarousel(){
-    if(proyectos.length === 0) return;
+    if(instalaciones.length === 0) return;
 
     //Calcular los indices de las cajas
-    const prevIndex = (currentIndex - 1 + proyectos.length) % proyectos.length;
-    const nextIndex = (currentIndex + 1) % proyectos.length;
+    const prevIndex = (currentIndex - 1 + instalaciones.length) % instalaciones.length;
+    const nextIndex = (currentIndex + 1) % instalaciones.length;
 
     cajas.forEach((caja, index) => {
-        let proyecto;
+        let instalacion;
         if(index === 0){
-            proyecto = proyectos[prevIndex];
+            instalacion = instalaciones[prevIndex];
         }else if(index === 1){
-            proyecto = proyectos[currentIndex];
+            instalacion = instalaciones[currentIndex];
         }else if(index === 2){
-            proyecto = proyectos[nextIndex];
+            instalacion = instalaciones[nextIndex];
         }
 
         const img = caja.querySelector('img');
         const titulo = caja.querySelector('h3');
         const descripcion = caja.querySelector('p');
 
-        img.src = `../${proyecto.imagen}`;
-        img.alt = `${proyecto.titulo}`;
-        titulo.textContent = `${proyecto.titulo}`;
-        descripcion.textContent = `${proyecto.descripcion}`;
+        img.src = `../${instalacion.imagen}`;
+        img.alt = `${instalacion.titulo}`;
+        titulo.textContent = `${instalacion.titulo}`;
+        descripcion.textContent = `${instalacion.descripcion}`;
     });
 
     //Actualizar los puntos
@@ -78,12 +78,12 @@ function updateCarousel(){
 
 //Eventos botones
 prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + proyectos.length) % proyectos.length;
+    currentIndex = (currentIndex - 1 + instalaciones.length) % instalaciones.length;
     updateCarousel();
 });
 
 nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % proyectos.length;
+    currentIndex = (currentIndex + 1) % instalaciones.length;
     updateCarousel();
 });
 
@@ -99,9 +99,9 @@ carousel.addEventListener('mousemove', (e) => {
     const moveX = e.pageX - startX;
     if(Math.abs(moveX) > 100){
         if(moveX > 0){
-            currentIndex = (currentIndex - 1 + proyectos.length) % proyectos.length;
+            currentIndex = (currentIndex - 1 + instalaciones.length) % instalaciones.length;
         }else{
-            currentIndex = (currentIndex + 1) % proyectos.length;
+            currentIndex = (currentIndex + 1) % instalaciones.length;
         }
         updateCarousel();
         isDragging = false;
@@ -124,9 +124,9 @@ carousel.addEventListener('touchmove', (e) => {
     const moveX = e.touches[0].pageX - startX;
     if(Math.abs(moveX) > 100){
         if(moveX > 0){
-            currentIndex = (currentIndex - 1 + proyectos.length) % proyectos.length;
+            currentIndex = (currentIndex - 1 + instalaciones.length) % instalaciones.length;
         }else{
-            currentIndex = (currentIndex + 1) % proyectos.length;
+            currentIndex = (currentIndex + 1) % instalaciones.length;
         }
         updateCarousel();
         isDragging = false;
@@ -142,9 +142,9 @@ fetch('../data/datos.json')
     .then(response => response.json())
     .then(data => {
         cargarGaleria(data.proyectos);
-        proyectos = data.proyectos;
-        //Crear un punto para cada proyecto
-        proyectos.forEach(() => {
+        instalaciones = data.instalaciones;
+        //Crear un punto para cada instalacion
+        instalaciones.forEach(() => {
             const dot = document.createElement('div');
             dot.classList.add('dot', 'inactive');
             dotsContainer.appendChild(dot);

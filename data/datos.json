@@ -85,6 +85,38 @@
             "enlace": "views/galeria.html"
         }
     ],
+    "instalaciones":[
+        {
+            "titulo": "Office cocina",
+            "descripcion": "Café, snacks y zona comedor para los usuarios.",
+            "imagen":"assets/images/instalaciones/cocina.jpg"
+        },
+        {
+            "titulo": "Salas coworking",
+            "descripcion": "Espacios amplios y modernos para trabajar en equipo.",
+            "imagen":"assets/images/instalaciones/coworking.jpg"
+        },
+        {
+            "titulo": "Zona de descanso",
+            "descripcion": "Un lugar cómodo para desconectar y recargar energía.",
+            "imagen":"assets/images/instalaciones/descanso.jpg"
+        },
+        {
+            "titulo": "Sala de reuniones",
+            "descripcion": "Equipadas con pantallas y videoconferencia.",
+            "imagen":"assets/images/instalaciones/reunion.jpg"
+        },
+        {
+            "titulo": "Conectividad alta velocidad",
+            "descripcion": "Conexión rápida, estable y segura para trabajar sin interrupciones.",
+            "imagen":"assets/images/instalaciones/servidores.jpg"
+        },
+        {
+            "titulo": "Terraza exterior",
+            "descripcion": "Espacio al aire libre para trabajar o relajarse.",
+            "imagen":"assets/images/instalaciones/terraza.jpg"
+        }
+    ],
     "footer":[
         {
             "titulo1": "DevSolutions",
