@@ -1060,6 +1060,140 @@ footer {
     transform: translateY(2px);
 }
 
+/*CAROUSEL*/
+#carousel{
+    margin-bottom: 50px;
+}
+.carousel-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 85%;
+    max-width: 900px;
+    margin: 50px auto 0;
+}
+
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 16px;
+    transition: all 0.5s ease-in-out;
+    touch-action: pan-y;
+}
+
+.caja{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 380px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--background-color-secondary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .4);
+    transition: all 0.4s ease-in-out;
+}
+
+.caja.active{
+    flex: 2.2;
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+
+.caja.inactive{
+    flex: 1;
+    opacity: 0.55;
+    transform: scale(0.9);
+}
+
+.caja img{
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    object-fit: cover;
+    cursor: grab;
+    display: block;
+}
+
+.caja-contenido{
+    padding: 1.2rem 1.4rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.caja-contenido h3{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: var(--text-color-secundary);
+}
+.caja-contenido p{
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+/*Las cajas inactivas solo muestran la imagen, sin texto*/
+.caja.inactive .caja-contenido{
+    display: none;
+}
+.prev-btn,
+.next-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--background-color-secondary);
+    color: var(--text-color-secundary);
+    border: none;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
+    transition: all .2s ease-in-out;
+    z-index: 100;
+}
+
+.prev-btn:hover,
+.next-btn:hover{
+    background-color: var(--a-link-hover);
+    color: #fff;
+}
+
+.prev-btn{
+    left: -22px;
+}
+.next-btn{
+    right: -22px;
+}
+
+/*Dots-Carousel*/
+.dots-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 8px;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.dot.active{
+    background-color: var(--a-link-hover);
+    width: 24px;
+    border-radius: 5px;
+}
+
 /*CONTACTO*/
 .titulo-contacto{
     color: var(--text-color-secundary);
