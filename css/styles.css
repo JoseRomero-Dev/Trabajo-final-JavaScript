@@ -1062,7 +1062,7 @@ footer {
 
 /*CAROUSEL*/
 #carousel{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .carousel-container{
     display: flex;
@@ -1570,6 +1570,45 @@ footer {
     }
     #map{
         min-height: 300px;
+    }
+    /*GALERIA-Carousel*/
+    .caja.inactive{
+        display: none;
+    }
+    .caja.active{
+        flex: none;
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        transform: none;
+        opacity: 1;
+        margin: 0 auto;
+    }
+    .caja.active img{
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+    .caja-contenido {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 60px;
+        padding: 0.8rem;
+    }
+
+    .caja-contenido h3{
+        margin: 0;
+        font-size: 1rem;
+    }
+    .caja-contenido p {
+        display: none;
+    }
+    .prev-btn, .next-btn{
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 }
 
