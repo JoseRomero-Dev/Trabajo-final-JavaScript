@@ -2,12 +2,13 @@
 
 /*Variables*/
 :root {
-    --background-color-primary: #000000;
+    --background-color-primary: #0a0a0a;
     --background-color-secondary: #fff;
     --text-color-primary: #fff;
-    --text-color-secundary: #000000;
+    --text-color-secundary: #111827;
     --a-link: #fff;
     --a-link-hover: #1960d2;
+    --text-muted: #6b7280;
 }
 
 /*Reseteo*/
@@ -271,7 +272,7 @@ nav {
 
 .card-servicio p {
     line-height: 1.6;
-    color: #555;
+    color: var(--text-muted);
 }
 
 /*PROYECTOS*/
@@ -331,7 +332,7 @@ nav {
 .card-proyecto p {
     margin: 0 10px 15px 15px;
     line-height: 1.6;
-    color: #555;
+    color: var(--text-muted);
 }
 
 .enlace-proyecto {
@@ -409,7 +410,7 @@ nav {
 
 .contenido-noticia span {
     font-size: 0.9rem;
-    color: #777;
+    color: var(--text-muted);
     font-weight: 500;
 }
 
@@ -419,7 +420,7 @@ nav {
 }
 
 .contenido-noticia p {
-    color: #666;
+    color: var(--text-muted);
     line-height: 1.6;
 }
 
@@ -570,7 +571,7 @@ footer {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #929bac;
+    color: var(--text-muted);
     margin-bottom: 14px;
 }
 
@@ -661,7 +662,7 @@ footer {
 
 .campo-hint {
     font-size: 11px;
-    color: #9ca3af;
+    color: var(--text-muted);
 }
 
 /* Select personalizado */
@@ -683,7 +684,7 @@ footer {
     transform: translateY(-50%);
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid #9ca3af;
+    border-top: 5px solid var(--text-muted);
     pointer-events: none;
 }
 
@@ -772,7 +773,7 @@ footer {
 
 .resumen-label {
     font-size: 13px;
-    color: #6b7280;
+    color: var(--text-muted);
     margin-bottom: 4px;
 }
 
@@ -784,7 +785,7 @@ footer {
 
 .resumen-desglose {
     font-size: 12px;
-    color: #9ca3af;
+    color: var(--text-muted);
     margin-top: 4px;
 }
 
@@ -813,7 +814,7 @@ footer {
     align-items: center;
     gap: 8px;
     font-size: 13px;
-    color: #6b7280;
+    color: var(--text-muted);
     cursor: pointer;
     transition: color .2s;
 }
@@ -883,7 +884,7 @@ footer {
 
 .botones-formulario button[type="reset"] {
     background-color: transparent;
-    color: #6b7280;
+    color: var(--text-muted);
     border: 1px solid #e5e7eb;
 }
 
@@ -943,7 +944,7 @@ footer {
 
 .modal p {
     font-size: 14px;
-    color: #6b7280;
+    color: var(--text-muted);
     margin-bottom: 24px;
 }
 
@@ -980,7 +981,7 @@ footer {
     text-align: center;
     font-size: 35px;
     margin-bottom: 35px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .titulo-galeria span{
     border-bottom: 2px solid var(--text-color-secundary);
@@ -1039,7 +1040,7 @@ footer {
 .card-galeria p {
     margin: 0 10px 15px 15px;
     line-height: 1.6;
-    color: #555;
+    color: var(--text-muted);
 }
 
 .enlace-galeria {
@@ -1061,15 +1062,13 @@ footer {
 }
 
 /*CAROUSEL*/
-#carousel{
-    margin-bottom: 20px;
-}
+
 .carousel-container{
     display: flex;
     align-items: center;
     position: relative;
-    width: 85%;
-    max-width: 900px;
+    width: 90%;
+    max-width: 1400px;
     margin: 50px auto 0;
 }
 
@@ -1087,7 +1086,7 @@ footer {
     display: flex;
     flex-direction: column;
     flex: 1;
-    height: 380px;
+    height: 450px;
     border-radius: 16px;
     overflow: hidden;
     background-color: var(--background-color-secondary);
@@ -1133,7 +1132,7 @@ footer {
 .caja-contenido p{
     font-size: 0.9rem;
     line-height: 1.5;
-    color: #555;
+    color: var(--text-muted);
 }
 /*Las cajas inactivas solo muestran la imagen, sin texto*/
 .caja.inactive .caja-contenido{
@@ -1157,7 +1156,7 @@ footer {
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
     transition: all .2s ease-in-out;
-    z-index: 100;
+    z-index: 20;
 }
 
 .prev-btn:hover,
@@ -1263,7 +1262,7 @@ footer {
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #9ca3af;
+    color: var(--text-muted);
     margin: 0 0 3px;
 }
 .dato-texto p{
